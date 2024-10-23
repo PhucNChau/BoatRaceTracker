@@ -10,8 +10,14 @@ func main() {
     
     print("Enter the name:")
     boatName = readLine() ?? ""
+    if boatName.uppercased() == "STOP" || boatName == "" {
+        return
+    }
     print("Enter the time:")
     boatTime = readLine() ?? ""
+    if boatTime.uppercased() == "STOP" || boatTime == "" {
+        return
+    }
     
     while boatName.uppercased() != "STOP" && boatName != ""
             && boatTime.uppercased() != "STOP" && boatTime != "" {
